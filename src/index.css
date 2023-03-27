@@ -7,7 +7,75 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p, a, span, ins, div, body, input, img, del, i, em, ul, li, h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* 內减盒子模型 */
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  /* 清除下划线 */
+  color: #000;
+}
+
+a:link {
+  color: #330099;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #FF0000;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+  /* 设置图片与文本中线对齐 */
+}
+
+body {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.clearfix::after {
+  /* 单伪元素清除浮动的影响 */
+  content: ".";
+  /* 内容 */
+  height: 0;
+  /* 设置内容高度为0 */
+  display: block;
+  visibility: hidden;
+  /* 虽然内容没有高度,但是还是会显示出来,所以用visibility:hidden来设置不占据页面空间的内容 */
+  clear: both;
+  /* 清除浮动 */
+}
+
+.clearfix {
+  *zoom: 1;
+  /* 兼容低版本ie浏览器 */
 }
