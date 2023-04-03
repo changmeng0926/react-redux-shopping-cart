@@ -1,0 +1,33 @@
+.self-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  &.border {
+    border: 1px solid #d5d5d5;
+  }
+  &-header,
+  &-body,
+  &-footer {
+    padding: 0 24px;
+  }
+  &-header,
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-header {
+    height: 48px;
+    border-bottom: 1px solid #d5d5d5;
+  }
+  &-body {
+    flex: 1;
+    padding: 24px;
+  }
+  &-footer {
+    height: 64px;
+    border-top: 1px solid #d5d5d5;
+  }
+}

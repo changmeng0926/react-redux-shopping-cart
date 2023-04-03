@@ -1,10 +1,13 @@
 .shopping-cart {
-  height: 100%;
-  padding: 16px 8%;
+  min-height: 100%;
+  padding: 24px 8%;
   display: flex;
   .ant-card {
     flex: 1;
-    border-radius: 18px;
+    border-radius: 18px 18px 0 0;
+  }
+  .ant-card-body {
+    padding: 24px 24px 0;
   }
   .cart-foot-bar .clear-button {
     background: rgb(238, 238, 238);
@@ -95,7 +98,6 @@
 }
 
 .no-data {
-  // background: #fff;
   .ant-empty-description {
     color: rgba(0,0,0,.35);
   }

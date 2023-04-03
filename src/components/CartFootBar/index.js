@@ -5,10 +5,10 @@ import { Button } from 'antd'
 import './index.scss'
 
 function CartFootBar(props) {
-  const { clearCarts, payoff, total, width, right, background = '#fff', borderColor } = props
+  const { clearCarts, payoff, total } = props
 
   return (
-    <div className="cart-foot-bar" style={{ width, right, background, borderColor }}>
+    <>
       <div className="left">
         <Button className="clear-button" onClick={clearCarts} size="large" shape="round">
           清空购物车
@@ -27,7 +27,7 @@ function CartFootBar(props) {
           结算
         </Button>
       </div>
-    </div>
+    </>
   )
 }
 

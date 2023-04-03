@@ -4,12 +4,18 @@
 import './index.scss'
 import { Card, Button } from 'antd'
 import CartFootBarBox from '@/containers/CartFootBarBox'
+import SelfCard from '@/components/common/SelfCard'
 
 function Products(props) {
   const { list, addToCart } = props
 
   return (
-    <Card bordered={false} className="products">
+    <SelfCard
+      style={{ background: '#F0F2F5', minHeight: 'calc(100% - 48px)', margin: '24px 0' }}
+      border={false}
+      className="bottom-top top-right"
+      footer={<CartFootBarBox background={'#F0F2F5'} />}
+    >
       <div className="product-list">
         {list.map((i) => (
           <Card bordered={false} key={i.id}>
@@ -35,8 +41,7 @@ function Products(props) {
         <i></i>
         <i></i>
       </div>
-      <CartFootBarBox background={'#F0F2F5'} />
-    </Card>
+    </SelfCard>
   )
 }
 

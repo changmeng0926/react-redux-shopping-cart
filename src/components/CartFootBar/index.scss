@@ -1,56 +1,37 @@
-.cart-foot-bar {
-  height: 68px;
-  width: calc(100% - 256px - 48px);
-  background: #fff;
-  position: fixed;
-  bottom: 0;
-  right: 24px;
-  border-top: 1px solid #d5d5d5;
+.left,
+.right {
   display: flex;
-  justify-content: space-between;
-  .left,
-  .right {
+  align-items: center;
+}
+.right {
+  .product-total,
+  .price-total {
     display: flex;
     align-items: center;
   }
-  .left {
-    padding-left: 24px;
-    .clear-button {
-      cursor: pointer;
-      // background: #eee;
-      border: none;
+  .product-total {
+    font-size: 12px;
+    .count {
+      font-size: 20px;
+      margin: 0 6px 0;
+      color: red;
+      font-weight: bold;
     }
   }
-  .right {
-    .product-total,
-    .price-total {
-      display: flex;
-      align-items: center;
+  .price-total {
+    font-size: 14px;
+    .count {
+      font-size: 24px;
+      margin-left: 16px;
+      color: red;
+      font-weight: bold;
     }
-    .product-total {
-      font-size: 12px;
-      .count {
-        font-size: 20px;
-        margin: 0 6px 0;
-        color: red;
-        font-weight: bold;
-      }
-    }
-    .price-total {
-      font-size: 14px;
-      .count {
-        font-size: 24px;
-        margin-left: 16px;
-        color: red;
-        font-weight: bold;
-      }
-    }
-    .price-total {
-      margin-left: 48px;
-    }
-    .settle-up {
-      margin: 0 24px 0 12px;
-      border: none;
-    }
+  }
+  .price-total {
+    margin-left: 48px;
+  }
+  .settle-up {
+    margin-left: 12px;
+    border: none;
   }
 }
