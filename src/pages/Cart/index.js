@@ -8,7 +8,7 @@ import CartFootBarBox from '@/containers/CartFootBarBox'
 import SelfCard from '@/components/common/SelfCard'
 
 function Cart(props) {
-  const { cartList, subtract, add, countChange, payoff } = props
+  const { cartList, subtract, add, countChange, payoff, deleteProduct } = props
 
   return (
     <div className="shopping-cart">
@@ -42,7 +42,7 @@ function Cart(props) {
                 controls={false}
                 onChange={(v) => countChange(v, cart)}
               ></InputNumber>
-              <Button shape="round" type="text">
+              <Button shape="round" type="text" onClick={() => deleteProduct(cart)}>
                 删除
               </Button>
             </div>

@@ -30,6 +30,9 @@ const cartProducts = (cartProducts, action) => {
         inputCurr.count = inputValue > inputCurr.max ? inputCurr.max : inputValue
       }
       return [...cartProducts]
+    case 'CART_DELETE_PRODUCT':
+      const list = cartProducts.filter((i) => i.id !== id)
+      return list
     case 'CART_CLEAR':
       return []
     default:

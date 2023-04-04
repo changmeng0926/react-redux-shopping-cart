@@ -29,6 +29,13 @@ const list = (state, { type, list, id, inputValue }) => {
     case 'RESET':
       state.forEach((i) => (i.count = i.max))
       return [...state]
+    case 'RESET_BY_ID':
+      state.forEach((i) => {
+        if (i.id === id) {
+          i.count = i.max
+        }
+      })
+      return [...state]
     case 'INIT':
       state.forEach((i) => (i.max = i.count))
       return [...state]

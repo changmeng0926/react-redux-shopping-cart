@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Cart from '../pages/Cart'
-import { subtract, add, countChange, payoff } from '../actions'
+import { subtract, add, countChange, payoff, deleteProduct } from '../actions'
 
 function getCartList(state) {
   const { carts, products } = state
@@ -34,6 +34,9 @@ function mapDispatchToProps(dispatch) {
     },
     payoff() {
       dispatch(payoff)
+    },
+    deleteProduct(cart) {
+      dispatch(deleteProduct(cart.id))
     },
   }
 }
