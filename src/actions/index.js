@@ -37,6 +37,7 @@ export const countChange = (value, cart) => (dispatch) => {
   dispatch({ type: 'CART_INPUT_COUNT', id: cart.id, inputValue: value })
   dispatch({ type: 'CART_INPUT_COUNT_PRO', id: cart.id, inputValue: value })
 }
+// 购物车页面删除产品
 export const deleteProduct = (id) => (dispatch) => {
   dispatch({ type: 'CART_DELETE_PRODUCT', id })
   dispatch({ type: 'RESET_BY_ID', id })
